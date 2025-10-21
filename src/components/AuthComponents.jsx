@@ -9,8 +9,8 @@ const AuthComponents = () => {
   const [currentView, setCurrentView] = useState('login');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [username , setUsername] = useState('kadour');
-  const [password , setPassword] = useState('zaza');
+  const [username , setUsername] = useState('');
+  const [password , setPassword] = useState('');
   const navigate = useNavigate();
   
   const handleloginSubmit = async () => {
