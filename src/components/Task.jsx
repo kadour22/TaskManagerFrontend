@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Calendar, CheckCircle2, Clock, Plus, Search, Bell, Trophy, Trash2, Edit, X, Mail } from 'lucide-react';
 import axiosInstance from '../Auth/api';
-import MarkAsReadTask from './MarkAsReadTask';
 
 const Task = ({task}) => {
 
@@ -18,13 +17,19 @@ const deleteTask = async (id) => {
     window.location.reload();
 };
 
+const mark_as_read = async(id) => {
+    axiosInstance.post(`Task/task/${id}/`)
+    window.location.reload();
+}
+
+
 return (
     <div
     key={task.id}
     className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-all">
         <div className="flex items-start space-x-4">
             <button
-                onClick={() => toggleTaskStatus(task.id)}
+                onClick={() => mark_as_read(task.id)}
                 className="mt-1" >
                 <CheckCircle2
                 className={`w-6 h-6 ${
