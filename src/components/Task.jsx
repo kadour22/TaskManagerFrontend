@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Calendar, CheckCircle2, Clock, Plus, Search, Bell, Trophy, Trash2, Edit, X, Mail } from 'lucide-react';
 import axiosInstance from '../Auth/api';
+import MarkAsReadTask from './MarkAsReadTask';
 
 const Task = ({task}) => {
 
@@ -53,6 +54,7 @@ return (
                         <Trash2 className="w-4 h-4" />
                         </button>
         </div>
+        <MarkAsReadTask id={id}/>
     </div>
 )
 }
