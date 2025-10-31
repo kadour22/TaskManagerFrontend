@@ -54,7 +54,6 @@ return (
                         <Trash2 className="w-4 h-4" />
                         </button>
         </div>
-        <MarkAsReadTask id={id}/>
     </div>
 )
 }
